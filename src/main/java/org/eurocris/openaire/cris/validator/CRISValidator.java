@@ -443,7 +443,7 @@ public class CRISValidator {
 
 	/**
 	 * Get a {@link DocumentBuilderFactory} for parsing.
-https://community.veracode.com/s/article/Java-Remediation-Guidance-for-XXE This snippets tries to avoid XXE by disabling DTD. If it can't be disabled check the link for Documentbuilderfactory 
+           https://community.veracode.com/s/article/Java-Remediation-Guidance-for-XXE This snippets tries to avoid XXE by disabling DTD. If it can't be disabled check the link for Documentbuilderfactory 
 	 * @return
 	 */
 	protected static DocumentBuilderFactory getDocumentBuilderFactory() {
@@ -451,9 +451,9 @@ https://community.veracode.com/s/article/Java-Remediation-Guidance-for-XXE This 
 		dbf.setNamespaceAware( true );
 		dbf.setValidating( false );
 		dbf.setIgnoringComments( true );
-  dbf.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
-dbf.setXIncludeAware(false);
-dbf.setExpandEntityReferences(false);
+                dbf.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
+                dbf.setXIncludeAware(false);
+                dbf.setExpandEntityReferences(false);
 		return dbf;
 	}
 
