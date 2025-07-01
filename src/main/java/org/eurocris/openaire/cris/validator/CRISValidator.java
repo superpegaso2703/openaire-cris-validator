@@ -443,6 +443,7 @@ public class CRISValidator {
 
 	/**
 	 * Get a {@link DocumentBuilderFactory} for parsing.
+https://community.veracode.com/s/article/Java-Remediation-Guidance-for-XXE This snippets tries to avoid XXE by disabling DTD. If it can't be disabled check the link for Documentbuilderfactory 
 	 * @return
 	 */
 	protected static DocumentBuilderFactory getDocumentBuilderFactory() {
@@ -450,6 +451,9 @@ public class CRISValidator {
 		dbf.setNamespaceAware( true );
 		dbf.setValidating( false );
 		dbf.setIgnoringComments( true );
+ dbf.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true); //Disable DTDs
+dbf.setXIncludeAware(false); //disable XML Inclusions
+dbf.setExpandEntityReferences(false); // disable expand entity reference nodes
 		return dbf;
 	}
 
