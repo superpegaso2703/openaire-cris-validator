@@ -451,9 +451,9 @@ https://community.veracode.com/s/article/Java-Remediation-Guidance-for-XXE This 
 		dbf.setNamespaceAware( true );
 		dbf.setValidating( false );
 		dbf.setIgnoringComments( true );
- dbf.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true); //Disable DTDs
-dbf.setXIncludeAware(false); //disable XML Inclusions
-dbf.setExpandEntityReferences(false); // disable expand entity reference nodes
+  dbf.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
+dbf.setXIncludeAware(false);
+dbf.setExpandEntityReferences(false);
 		return dbf;
 	}
 
